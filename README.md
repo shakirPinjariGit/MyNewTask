@@ -18,7 +18,7 @@ Its just a simple page with card to show what app is all about.
 ## Dependencies
 App has used the following external modules.
 
-### Google Firebase Web library for JavaScript:
+### 1.Google Firebase Web library for JavaScript:
 To install :
 
     npm install firebase --save
