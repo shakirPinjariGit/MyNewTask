@@ -20,8 +20,11 @@ App has used the following external modules.
 
 ### Google Firebase Web library for JavaScript:
 To install :
+
     npm install firebase --save
+
 How to initialize:
+
     You will also need to add an import statement to the top of the app.component.ts file:
 
     import firebase from 'firebase';
@@ -38,7 +41,7 @@ How to initialize:
 Calling Firebase Api:
 
     import firebase from 'firebase';
-    
+
     register(credentials): Promise {
         return firebase.auth().createUserWithEmailAndPassword(credentials.email, credentials.password);
     }
