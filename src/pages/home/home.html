@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+  <ion-item>
+    <ion-label>Select Category</ion-label>
+      <ion-select [(ngModel)]="artCategory" (ionChange)='categorySelected()'>
+        <ion-option value="sports">Sports</ion-option>
+        <ion-option value="politics">Politics</ion-option>
+        <ion-option value="technology">Technology</ion-option>
+        <ion-option value="food">Food</ion-option>
+        <ion-option value="news">News</ion-option>
+        <ion-option value="music">Music</ion-option>
+        <ion-option value="funny">Funny</ion-option>
+        <ion-option value="gaming">Gaming</ion-option>
+        <ion-option value="art">Art</ion-option>
+    </ion-select>
+  </ion-item>
+  </ion-card>
+  <ion-card>
+      <ion-card-header>
+        Articles
+      </ion-card-header>
+      <ion-list>
+        <ion-item text-wrap *ngFor='let artItem of articleList.data.children | slice:start:end; let i=index'>
+          <ion-thumbnail item-start>
+            <img [src]="artItem.data.thumbnail">
+          </ion-thumbnail>
+          <h2>{{artItem.data.title}}</h2>
+          <p>{{artItem.data.author}} • {{artItem.data.created_utc | date:"fullDate"}}</p>
+        </ion-item>
+      </ion-list>
+  </ion-card>
+</ion-content>
